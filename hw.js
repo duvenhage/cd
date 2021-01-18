@@ -1,5 +1,44 @@
 "use strict";
 
+
+function min(arr) {
+    
+    let src = arr[0];
+    let sub = arr[1];
+    let len = sub.length;
+    let hash = [];
+    let ans = [];
+    
+//    alert(src);
+//    alert(sub);
+//    alert(len);
+    
+    hash = makeHash(sub);
+        
+}
+
+function makeHash(inp) {
+    
+    let ans = {boo:0};
+    
+    for (let i = 0; i < inp.length; i++) {
+        let x = inp[i];
+        
+        if (x in ans) {
+            ans.[x]++;
+            alert('add one to ' + x);
+        } else {
+            ans = {[x] : 1};
+            alert('adding ' + x);
+        }
+    }
+    return ans;
+}
+
+let ans;
+ans = min(["ahffaksfajeeubsne", "jefaa"]);
+alert(ans);
+/*
 let arr = [];
 let str = 'jefaa';
 
@@ -16,6 +55,30 @@ alert("done");
 alert(arr['a']);
 
 
+
+
+/*
+let sayHi = function() {
+  alert( "Hello" );
+};
+
+function boo() {
+    alert('boo');
+}
+alert(boo());
+/*
+alert(sayHi);
+sayHi();
+/*
+function pow(a, b) {
+    let ans = a;
+    for (let i = 0; i < b - 1; i++) {
+        ans *= a;
+    }
+    return ans;
+}
+
+alert(pow(3,3));
 
 /*
 let input = prompt('Enter a number greater than 1');
